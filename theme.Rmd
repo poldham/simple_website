@@ -1,0 +1,18 @@
+---
+title: "Add a Theme"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+RStudio websites include a number of themes for the colour and the font etc. To view the available themes use xxx
+
+To add a theme, add the following to your _site.yml
+
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate
+output_dir: "."

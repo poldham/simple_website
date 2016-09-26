@@ -1,0 +1,27 @@
+---
+title: "publishing the website"
+author: "Paul Oldham"
+date: "27 September 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Github
+
+We will assume that you will be publishing to Github using Github desktop (rather than directly from RStudio which takes a little more set up).
+
+1. Create a text file .nojekyll and save it at the root of the site (normally the project folder). This tells github not to try and build the site with jekyll. 
+
+2. In the `_site.yml` add a line with `output_dir: "."`. 
+
+3. The site files are sent to _site in your project folder. Move the xxx to the main folder. 
+
+###4. Add your project folder to github desktop. Press commit and then sync. This will add the site to your github repositories. 
+
+5. Github will allow you to publish websites for each repository (known as github pages or gh-pages). They will end up being posted at `yourusername.github.io/repositoryname`.
+
+To do this from your Github repository switch the branch from master to To FINISH.
+

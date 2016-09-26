@@ -1,0 +1,9 @@
+---
+title: "Create a Project"
+output: html_document
+---
+RStudio keeps files together using projects. When you open RStudio look for the Blue R icon in the top right and then choose New Project. It looks like this. 
+
+![](images/create_project.png)
+
+Generally you will want to create an new project such as `my_website` in an empty directory and find an appropriate place for it. 

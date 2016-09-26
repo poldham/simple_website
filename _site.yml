@@ -1,0 +1,20 @@
+name: "little-book-of-RStudio-websites"
+navbar:
+  title: "The Little Book of Websites in RStudio"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Create a Project"
+      href: project.html
+    - text: "Set Build Options"
+      href: build.html
+    - text: "Create a _site.yml"
+      href: create_yml.html
+    - text: "Tables and Plots"
+      href: tables_plots.html
+    - text: "Include Images"
+      href: images.html
+    - text: "Themes"
+      href: theme.html
+    - text: "Publishing your site"
+      href: publishing.html

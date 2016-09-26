@@ -1,0 +1,21 @@
+---
+title: "Include Images"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Including an image using rmarkdown is easy. 
+
+In the files pane in RStudion choose `New Folder` (or create on in your Finder in the Rproject folder). Call it say `images`.
+
+To reference an image in rmarkdown use the following. 
+
+
+`![](images/yourimagename.png)`
+
+Here is an example of the image used in this site
+
+![](images/build_options.png)
