@@ -1,5 +1,4 @@
 ---
-title: "Create _site.yml"
 output: html_document
 ---
 

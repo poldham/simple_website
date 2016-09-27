@@ -9,10 +9,9 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Paul Oldham" />
 
 
-<title>Build a Simple Website in RStudio</title>
+<title></title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -214,16 +213,21 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Build a Simple Website in RStudio</h1>
-<h4 class="author"><em>Paul Oldham</em></h4>
 
 </div>
 
 
-<p>It is very easy to create a nice responsive website using <code>rmarkdown</code> in the <a href="https://www.rstudio.com/products/rstudio/download/preview/">Preview version of RStudio</a>.</p>
-<p>This minimal guide will get you from opening RStudio to publishing a website in the shortest possible time….well possibly a bit longer. If you are reading this online follow the order of the menu to create a website like this one that you can publish.</p>
-<p>This example is based on the <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">simple RStudio walkthrough</a> with a few added details. Learn to do a lot more by reading the <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">RStudio guide to websites</a> and a lot lot more by reading about <a href="http://rmarkdown.rstudio.com/">rmarkdown</a>.</p>
-<p>The <a href="">rmarkdown</a> and the new <a href="">bookdown</a> packages were written by <a href="https://github.com/yihui">Yihui Xie</a> at <a href="https://www.rstudio.com">RStudio</a> and collaborators.</p>
+<div id="creating-a-.yml-file" class="section level2">
+<h2>Creating a .yml file</h2>
+<p>The <code>.yml</code> file is where the instructions for the site and the site navigation live. <code>yml</code> is short for <code>Yet Another Markup Language (yaml)</code>.</p>
+<p>The <code>yml</code> file is simply a text file (use <code>File &gt; New file &gt; Text File</code> in RStudio). Save it as <code>_site.yml</code> or it won’t work. [You can also create a regular Rmarkdown file and then choose the menu in the bottom right of the writing pane to change it to yaml].</p>
+<div id="content-of-the-_site.yml-file" class="section level3">
+<h3>Content of the _site.yml file</h3>
+<p>The content of the <code>yml</code> file should look something like the below.</p>
+<p>name: “little-book-of-RStudio-websites” navbar: title: “The Little Book of Websites in RStudio” left: - text: “Home” href: index.html - text: “Set Build Options” href: build.html - text: “Create a _site.yml&quot; href: “create_yml.html” - text: “Tables and Plots” href: about.html - text: “Submenu” href: submenu.html</p>
+<p>YOu</p>
+</div>
+</div>
 
 
 
