@@ -13,15 +13,36 @@ knitr::opts_chunk$set(echo = TRUE)
 
 We will assume that you will be publishing to Github using Github desktop (rather than directly from RStudio which takes a little more set up).
 
-1. Create a text file .nojekyll and save it at the root of the site (normally the project folder). This tells github not to try and build the site with jekyll. 
+1. Create an empty text file `.nojekyll` and save it at the root of the site (normally the project folder). Ignore any warnings about the file type. Because it starts with `.` the file will not show up in the file listing. However, this tells Github not to try and build the site with jekyll (the default for Github). 
 
 2. In the `_site.yml` add a line with `output_dir: "."`. 
 
-3. The site files are sent to _site in your project folder. Move the xxx to the main folder. 
+3. The site files are sent to _site in your project folder. Move `index.html` to the main project folder (the site root) or it will not build when you push it to Github. 
 
-###4. Add your project folder to github desktop. Press commit and then sync. This will add the site to your github repositories. 
+4. Add your project folder to github desktop. Press commit and then sync. This will add the site to your github repositories.
 
-5. Github will allow you to publish websites for each repository (known as github pages or gh-pages). They will end up being posted at `yourusername.github.io/repositoryname`.
+![](images/add_github_desktop.png)
 
-To do this from your Github repository switch the branch from master to To FINISH.
+5. Github will allow you to publish project websites for each repository (known as github pages or `gh-pages`). They will end up being posted at `yourusername.github.io/repositoryname`. 
+
+For example, the home for this website is [https://github.com/poldham/simple_website](https://github.com/poldham/simple_website)
+
+![](images/website_address.png)
+
+But, this is not the end of the story. What we see above where it says branch on the left is the `master`. Websites are published on the github pages branch of a repository to keep them separate (because your repository data and your project website may be quite different things).
+
+To publish the website we need to go into `Settings` in our repository and then scroll down. In the image below, where you see `master` in your repo change the branch to `gh-pages`. Your simple website will now build at the address given. You are reading this online so it must do. 
+
+![](images/website_gh_pages.png)
+
+6. Troubleshooting. It can take a few minutes (but not long) for Github to recognise the website. If you see a not found message check three things. 
+
+- That you have a line saying `output_dir: "."` at the bottom of `_site.yml`.
+- That you have `.nojekyll` in your main site folder.
+- That there is an index.html (you remembered to move it from the `_site` folder when you updated... easy to forget).
+- That you have selected the `gh-pages` branch in `Settings` in your repo.
+
+
+
+
 

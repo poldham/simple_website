@@ -198,10 +198,16 @@ $(document).ready(function () {
   <a href="images.html">Include Images</a>
 </li>
 <li>
+  <a href="embed.html">Embed a webpage</a>
+</li>
+<li>
   <a href="theme.html">Themes</a>
 </li>
 <li>
   <a href="publishing.html">Publishing your site</a>
+</li>
+<li>
+  <a href="updating.html">Updating</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -226,17 +232,38 @@ $(document).ready(function () {
 <h2>Github</h2>
 <p>We will assume that you will be publishing to Github using Github desktop (rather than directly from RStudio which takes a little more set up).</p>
 <ol style="list-style-type: decimal">
-<li><p>Create a text file .nojekyll and save it at the root of the site (normally the project folder). This tells github not to try and build the site with jekyll.</p></li>
+<li><p>Create an empty text file <code>.nojekyll</code> and save it at the root of the site (normally the project folder). Ignore any warnings about the file type. Because it starts with <code>.</code> the file will not show up in the file listing. However, this tells Github not to try and build the site with jekyll (the default for Github).</p></li>
 <li><p>In the <code>_site.yml</code> add a line with <code>output_dir: &quot;.&quot;</code>.</p></li>
-<li><p>The site files are sent to _site in your project folder. Move the xxx to the main folder.</p></li>
+<li><p>The site files are sent to _site in your project folder. Move <code>index.html</code> to the main project folder (the site root) or it will not build when you push it to Github.</p></li>
+<li><p>Add your project folder to github desktop. Press commit and then sync. This will add the site to your github repositories.</p></li>
 </ol>
-<div id="add-your-project-folder-to-github-desktop.-press-commit-and-then-sync.-this-will-add-the-site-to-your-github-repositories." class="section level3">
-<h3>4. Add your project folder to github desktop. Press commit and then sync. This will add the site to your github repositories.</h3>
-<ol start="5" style="list-style-type: decimal">
-<li>Github will allow you to publish websites for each repository (known as github pages or gh-pages). They will end up being posted at <code>yourusername.github.io/repositoryname</code>.</li>
-</ol>
-<p>To do this from your Github repository switch the branch from master to To FINISH.</p>
+<div class="figure">
+<img src="images/add_github_desktop.png" />
+
 </div>
+<ol start="5" style="list-style-type: decimal">
+<li>Github will allow you to publish project websites for each repository (known as github pages or <code>gh-pages</code>). They will end up being posted at <code>yourusername.github.io/repositoryname</code>.</li>
+</ol>
+<p>For example, the home for this website is <a href="https://github.com/poldham/simple_website" class="uri">https://github.com/poldham/simple_website</a></p>
+<div class="figure">
+<img src="images/website_address.png" />
+
+</div>
+<p>But, this is not the end of the story. What we see above where it says branch on the left is the <code>master</code>. Websites are published on the github pages branch of a repository to keep them separate (because your repository data and your project website may be quite different things).</p>
+<p>To publish the website we need to go into <code>Settings</code> in our repository and then scroll down. In the image below, where you see <code>master</code> in your repo change the branch to <code>gh-pages</code>. Your simple website will now build at the address given. You are reading this online so it must do.</p>
+<div class="figure">
+<img src="images/website_gh_pages.png" />
+
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Troubleshooting. It can take a few minutes (but not long) for Github to recognise the website. If you see a not found message check three things.</li>
+</ol>
+<ul>
+<li>That you have a line saying <code>output_dir: &quot;.&quot;</code> at the bottom of <code>_site.yml</code>.</li>
+<li>That you have <code>.nojekyll</code> in your main site folder.</li>
+<li>That there is an index.html (you remembered to move it from the <code>_site</code> folder when you updated… easy to forget).</li>
+<li>That you have selected the <code>gh-pages</code> branch in <code>Settings</code> in your repo.</li>
+</ul>
 </div>
 
 

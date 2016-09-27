@@ -9,22 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+Here is an example of embedding a web page. In this case it is a Tableau workbook. You may want to adjust the width and height. This will work but will not be visible until you view it in a browser (and may take some time to load).
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+When embedding Tableau you may want to play with the size of the workbook itself. Review knitr options. For ebooks with bookdown see [here](https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<iframe align = "center" width = "1000" height = "1000" src="https://public.tableau.com/profile/poldham#!/vizhome/algeria_patents_updated_19082016/SpeciesOverview"/>

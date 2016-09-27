@@ -13,8 +13,12 @@ navbar:
       href: tables_plots.html
     - text: "Include Images"
       href: images.html
+    - text: "Embed a webpage"
+      href: embed.html
     - text: "Themes"
       href: theme.html
     - text: "Publishing your site"
       href: publishing.html
+    - text: "Updating"
+      href: updating.html
 output_dir: "."

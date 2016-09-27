@@ -1,0 +1,13 @@
+---
+title: "Updating your website"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Your website lives on the `gh-pages` branch of your Github repository. This means that in Github desktop when you want to commit changes you must select the `gh-pages` branch as in the image below. 
+
+![](images/update_desktop_ghpages.png)
+

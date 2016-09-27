@@ -196,10 +196,16 @@ $(document).ready(function () {
   <a href="images.html">Include Images</a>
 </li>
 <li>
+  <a href="embed.html">Embed a webpage</a>
+</li>
+<li>
   <a href="theme.html">Themes</a>
 </li>
 <li>
   <a href="publishing.html">Publishing your site</a>
+</li>
+<li>
+  <a href="updating.html">Updating</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -224,8 +230,28 @@ $(document).ready(function () {
 <div id="content-of-the-_site.yml-file" class="section level3">
 <h3>Content of the _site.yml file</h3>
 <p>The content of the <code>yml</code> file should look something like the below.</p>
-<p>name: “little-book-of-RStudio-websites” navbar: title: “The Little Book of Websites in RStudio” left: - text: “Home” href: index.html - text: “Set Build Options” href: build.html - text: “Create a _site.yml&quot; href: “create_yml.html” - text: “Tables and Plots” href: about.html - text: “Submenu” href: submenu.html</p>
-<p>YOu</p>
+<pre class="r"><code>name: &quot;little-book-of-RStudio-websites&quot;
+navbar:
+  left:
+    - text: &quot;Home&quot;
+      href: index.html
+    - text: &quot;Create a Project&quot;
+      href: project.html
+    - text: &quot;Set Build Options&quot;
+      href: build.html
+    - text: &quot;Create a _site.yml&quot;
+      href: create_yml.html
+    - text: &quot;Tables and Plots&quot;
+      href: tables_plots.html
+    - text: &quot;Include Images&quot;
+      href: images.html
+    - text: &quot;Embed a webpage&quot;
+      href: embed.html
+    - text: &quot;Themes&quot;
+      href: theme.html
+    - text: &quot;Publishing your site&quot;
+      href: publishing.html
+output_dir: &quot;.&quot; # if publishing on Github pages</code></pre>
 </div>
 </div>
 

@@ -12,19 +12,30 @@ The `yml` file is simply a text file (use `File > New file > Text File` in RStud
 
 The content of the `yml` file should look something like the below. 
 
+```{r eval=FALSE}
 name: "little-book-of-RStudio-websites"
 navbar:
-  title: "The Little Book of Websites in RStudio"
   left:
     - text: "Home"
       href: index.html
+    - text: "Create a Project"
+      href: project.html
     - text: "Set Build Options"
       href: build.html
     - text: "Create a _site.yml"
-      href: "create_yml.html"
+      href: create_yml.html
     - text: "Tables and Plots"
-      href: about.html
-        - text: "Submenu"
-          href: submenu.html
+      href: tables_plots.html
+    - text: "Include Images"
+      href: images.html
+    - text: "Embed a webpage"
+      href: embed.html
+    - text: "Themes"
+      href: theme.html
+    - text: "Publishing your site"
+      href: publishing.html
+output_dir: "." # if publishing on Github pages
+```
 
-YOu 
+
+
