@@ -14,3 +14,21 @@ Here is an example of embedding a web page. In this case it is a Tableau workboo
 When embedding Tableau you may want to play with the size of the workbook itself. Review knitr options. For ebooks with bookdown see [here](https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html)
 
 <iframe align = "center" width = "1000" height = "1000" src="https://public.tableau.com/profile/poldham#!/vizhome/algeria_patents_updated_19082016/SpeciesOverview"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
