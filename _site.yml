@@ -1,24 +1,34 @@
-name: "little-book-of-RStudio-websites"
+name: "Create a simple Rmarkdown website"
+output:
+  html_document:
+    theme: cosmo
+    #highlight: textmate
 navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Create a Project"
-      href: project.html
-    - text: "Set Build Options"
-      href: build.html
-    - text: "Create a _site.yml"
-      href: create_yml.html
-    - text: "Tables and Plots"
-      href: tables_plots.html
-    - text: "Include Images"
-      href: images.html
-    - text: "Embed a webpage"
-      href: embed.html
-    - text: "Pizza Lovers Section"
-      href: pizza.html
-    - text: "Publishing your site"
-      href: publishing.html
-    - text: "Updating"
-      href: updating.html
+    - text: "Getting Started"
+      menu:
+        - text: "Create a Project"
+          href: project.html
+        - text: "Set Build Options"
+          href: build.html
+        - text: "Create a _site.yml"
+          href: create_yml.html
+        - text: "Change the Theme"
+          href: theme.html
+    - text: "Add Features"
+      menu: 
+        - text: "Tables and Plots"
+          href: tables_plots.html
+        - text: "Include Images"
+          href: images.html
+        - text: "Embed a webpage"
+          href: embed.html
+    - text: "Publish and Update"      
+      menu: 
+        - text: "Publishing"
+          href: publishing.html
+        - text: "Updating"
+          href: updating.html
 output_dir: "."
