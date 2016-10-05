@@ -1,7 +1,5 @@
 ---
 title: "Publishing your website"
-author: "Paul Oldham"
-date: "27 September 2016"
 output: html_document
 ---
 
