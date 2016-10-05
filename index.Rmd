@@ -1,6 +1,6 @@
 ---
 title: "Build a Simple Website with Rmarkdown in RStudio"
-author: "Paul Oldham"
+author: "Paul Oldham, [One World Analytics](https://oneworldanalytics.github.io)"
 ---
 
 
