@@ -14,6 +14,9 @@ The content of the `yml` file should look something like the below.
 
 ```{r eval=FALSE}
 name: "little-book-of-RStudio-websites"
+output:
+  html_document:
+    theme: flatly # specifies the theme
 navbar:
   left:
     - text: "Home"
@@ -37,5 +40,50 @@ navbar:
 output_dir: "." # if publishing on Github pages
 ```
 
+The more menu items we add the more the size of the navigation bar at the top will increase. This can lead to the page not displaying properly. 
+
+To solve this use sub-menus as in the `_site.yml` for this site (see below). 
+
+```{r eval=FALSE}
+name: "Create a simple Rmarkdown website"
+navbar:
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Getting Started"
+      menu:
+        - text: "Create a Project"
+          href: project.html
+        - text: "Set Build Options"
+          href: build.html
+        - text: "Create a _site.yml"
+          href: create_yml.html
+    - text: "Add Features"
+      menu: 
+        - text: "Tables and Plots"
+          href: tables_plots.html
+        - text: "Include Images"
+          href: images.html
+        - text: "Embed a webpage"
+          href: embed.html
+    - text: "Publish and Update"      
+      menu: 
+        - text: "Publishing"
+          href: publishing.html
+        - text: "Updating"
+          href: updating.html
+output_dir: "."
+```
+
+The key to this is to open a new menu heading as follows and then specify the items. `text` refers to the text for the menu button and the `menu` will group the pages that you specify. Note that the tab indents matter and if something goes wrong you have probably forgotten the `- text` for the menu heading or to indent uniformly.
+
+```{r eval=FALSE}
+- text: "Publish and Update"      
+      menu: 
+        - text: "Publishing"
+          href: publishing.html
+        - text: "Updating"
+          href: updating.html
+```
 
 

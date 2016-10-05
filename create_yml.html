@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -180,32 +180,59 @@ $(document).ready(function () {
         <li>
   <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="project.html">Create a Project</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Getting Started
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Create a Project</a>
+    </li>
+    <li>
+      <a href="build.html">Set Build Options</a>
+    </li>
+    <li>
+      <a href="create_yml.html">Create a _site.yml</a>
+    </li>
+    <li>
+      <a href="theme.html">Change the Theme</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="build.html">Set Build Options</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Add Features
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tables_plots.html">Tables and Plots</a>
+    </li>
+    <li>
+      <a href="images.html">Include Images</a>
+    </li>
+    <li>
+      <a href="embed.html">Embed a webpage</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="create_yml.html">Create a _site.yml</a>
-</li>
-<li>
-  <a href="tables_plots.html">Tables and Plots</a>
-</li>
-<li>
-  <a href="images.html">Include Images</a>
-</li>
-<li>
-  <a href="embed.html">Embed a webpage</a>
-</li>
-<li>
-  <a href="pizza.html">Pizza Lovers Section</a>
-</li>
-<li>
-  <a href="publishing.html">Publishing your site</a>
-</li>
-<li>
-  <a href="updating.html">Updating</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Publish and Update
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="publishing.html">Publishing</a>
+    </li>
+    <li>
+      <a href="updating.html">Updating</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -231,6 +258,9 @@ $(document).ready(function () {
 <h3>Content of the _site.yml file</h3>
 <p>The content of the <code>yml</code> file should look something like the below.</p>
 <pre class="r"><code>name: &quot;little-book-of-RStudio-websites&quot;
+output:
+  html_document:
+    theme: flatly # specifies the theme
 navbar:
   left:
     - text: &quot;Home&quot;
@@ -252,6 +282,43 @@ navbar:
     - text: &quot;Publishing your site&quot;
       href: publishing.html
 output_dir: &quot;.&quot; # if publishing on Github pages</code></pre>
+<p>The more menu items we add the more the size of the navigation bar at the top will increase. This can lead to the page not displaying properly.</p>
+<p>To solve this use sub-menus as in the <code>_site.yml</code> for this site (see below).</p>
+<pre class="r"><code>name: &quot;Create a simple Rmarkdown website&quot;
+navbar:
+  left:
+    - text: &quot;Home&quot;
+      href: index.html
+    - text: &quot;Getting Started&quot;
+      menu:
+        - text: &quot;Create a Project&quot;
+          href: project.html
+        - text: &quot;Set Build Options&quot;
+          href: build.html
+        - text: &quot;Create a _site.yml&quot;
+          href: create_yml.html
+    - text: &quot;Add Features&quot;
+      menu: 
+        - text: &quot;Tables and Plots&quot;
+          href: tables_plots.html
+        - text: &quot;Include Images&quot;
+          href: images.html
+        - text: &quot;Embed a webpage&quot;
+          href: embed.html
+    - text: &quot;Publish and Update&quot;      
+      menu: 
+        - text: &quot;Publishing&quot;
+          href: publishing.html
+        - text: &quot;Updating&quot;
+          href: updating.html
+output_dir: &quot;.&quot;</code></pre>
+<p>The key to this is to open a new menu heading as follows and then specify the items. <code>text</code> refers to the text for the menu button and the <code>menu</code> will group the pages that you specify. Note that the tab indents matter and if something goes wrong you have probably forgotten the <code>- text</code> for the menu heading or to indent uniformly.</p>
+<pre class="r"><code>- text: &quot;Publish and Update&quot;      
+      menu: 
+        - text: &quot;Publishing&quot;
+          href: publishing.html
+        - text: &quot;Updating&quot;
+          href: updating.html</code></pre>
 </div>
 </div>
 
