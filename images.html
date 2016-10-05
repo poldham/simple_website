@@ -251,7 +251,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>Including an image using rmarkdown is easy.</p>
+<p>Including an image using <code>rmarkdown</code> is easy.</p>
 <p>In the files pane in RStudio choose <code>New Folder</code> (or create one in your Finder in the Rproject folder). Call it say <code>images</code>.</p>
 <p>To reference an image in rmarkdown use the following.</p>
 <p><code>![](images/yourimagename.png)</code></p>
@@ -262,20 +262,12 @@ $(document).ready(function () {
 </div>
 <div id="sizing-images" class="section level2">
 <h2>Sizing images</h2>
-<p>There are a number of ways of sizing images using the <code>knitr</code> package.</p>
-<div id="size-all-images." class="section level3">
-<h3>1. Size all images.</h3>
-<p>If we wanted all images to be the same size we could include the following R chunk at the top of the document. This will set the height and width to 6 inches (using the knitr package)</p>
-<pre class="r"><code>opts_chunk$set(comment=NA, fig.width=6, fig.height=6))</code></pre>
-</div>
-<div id="size-a-single-image." class="section level3">
-<h3>2. Size a single image.</h3>
-<p>We often want more control over single images. We can handle this with the <code>knitr</code> package by including an R chunk (ctrl alt I on Windows and Cmd I on a Mac).</p>
-<p>In the code chunk heading we could specify the width of a figure as percentages as fillows and we might also want to centre the figure <code>{r out.width = &quot;50%&quot;, fig.align = &quot;center&quot;}</code>. We would then include a call to <code>knitr::include_graphics()</code> with our image address in quotes as below. Note that the knitr documentation specifies that you may need to <code>install.packages(&quot;png&quot;)</code> and <code>install.packages(&quot;jpeg&quot;)</code> for automatic calculation of the width of images.</p>
+<p>There are a number of ways of sizing images using the <code>knitr</code> package. One of the simplest is to size images in R code chunks.</p>
+<p>To inserta code chunk use <code>Ctrl Alt I</code> on Windows or <code>Cmd I</code> on a Mac.</p>
+<p>In the code chunk heading we could specify the width of a figure as percentages and we might also want to centre the figure <code>{r out.width = &quot;50%&quot;, fig.align = &quot;center&quot;}</code>. We would then include a call to <code>knitr::include_graphics()</code> with our image address in quotes as below. Note that the knitr documentation specifies that you may need to <code>install.packages(&quot;png&quot;)</code> and <code>install.packages(&quot;jpeg&quot;)</code> for automatic calculation of the width of images.</p>
 <p>For most purposes something like this will work for a web page display.</p>
 <pre class="r"><code>knitr::include_graphics(&quot;images/fig31_adjust_nodes.png&quot;)</code></pre>
 <p><img src="images/fig31_adjust_nodes.png" width="50%" style="display: block; margin: auto;" /></p>
-</div>
 </div>
 
 

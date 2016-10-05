@@ -4,13 +4,13 @@ output: html_document
 
 ## Creating a .yml file
 
-The `.yml` file is where the instructions for the site and the site navigation live. `yml` is short for `Yet Another Markup Language (yaml)`. 
+The `_site.yml` file is where the instructions for the site and the site navigation live. `yml` is short for `Yet Another Markup Language (yaml)`. 
 
-The `yml` file is simply a text file (use `File > New file > Text File` in RStudio). Save it as `_site.yml` or it won't work. [You can also create a regular Rmarkdown file and then choose the menu in the bottom right of the writing pane to change it to yaml]. 
+The `yml` file is simply a text file (use `File > New file > Text File` in RStudio). Save it as `_site.yml` or it won't work. You can also create a regular RScript or Rmarkdown file and then choose the pop up menu in the bottom right of the writing pane to change it to YAML. 
 
 ###Content of the _site.yml file
 
-The content of the `yml` file should look something like the below. 
+The content of the `_site.yml` file should look something like the below. 
 
 ```{r eval=FALSE}
 name: "little-book-of-RStudio-websites"
@@ -40,7 +40,7 @@ navbar:
 output_dir: "." # if publishing on Github pages
 ```
 
-The more menu items we add the more the size of the navigation bar at the top will increase. This can lead to the page not displaying properly. 
+Bear in mind that the more menu items we add the more the size of the navigation bar at the top will increase. This can lead to the page not displaying properly. 
 
 To solve this use sub-menus as in the `_site.yml` for this site (see below). 
 
