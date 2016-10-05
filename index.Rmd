@@ -1,5 +1,5 @@
 ---
-title: "Build a Simple Website in RStudio"
+title: "Build a Simple Website with Rmarkdown in RStudio"
 author: "Paul Oldham"
 ---
 
@@ -7,7 +7,7 @@ author: "Paul Oldham"
 
 It is very easy to create a nice responsive website using `rmarkdown` in the [Preview version of RStudio](https://www.rstudio.com/products/rstudio/download/preview/). 
 
-This minimal guide will get you from opening RStudio to publishing a website in the shortest possible time....well possibly a  bit longer. If you are reading this online follow the order of the menu to create a website like this one that you can publish. Take a fork and Clone the repository for this site from [https://github.com/poldham/simple_website](https://github.com/poldham/simple_website)... make sure to choose the `gh-pages` branch as the most upto date.
+This minimal guide will get you from opening RStudio to publishing a website in the shortest possible time....well possibly a  bit longer. If you are reading this online follow the order of the menu to create a website like this one that you can publish. Take a `fork` then `clone` the repository for this site from [https://github.com/poldham/simple_website](https://github.com/poldham/simple_website).
 
 This is not the best simple rmarkdown website in the world, it's just a tribute. To learn more make sure you read the [simple RStudio walkthrough](http://rmarkdown.rstudio.com/rmarkdown_websites.html) that this site is based on. Learn to do a lot more by reading the [RStudio guide to websites](http://rmarkdown.rstudio.com/rmarkdown_websites.html) and a lot lot more by reading about [rmarkdown](http://rmarkdown.rstudio.com/). 
 

@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -180,29 +180,59 @@ $(document).ready(function () {
         <li>
   <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="project.html">Create a Project</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Getting Started
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Create a Project</a>
+    </li>
+    <li>
+      <a href="build.html">Set Build Options</a>
+    </li>
+    <li>
+      <a href="create_yml.html">Create a _site.yml</a>
+    </li>
+    <li>
+      <a href="theme.html">Change the Theme</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="build.html">Set Build Options</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Add Features
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tables_plots.html">Tables and Plots</a>
+    </li>
+    <li>
+      <a href="images.html">Include Images</a>
+    </li>
+    <li>
+      <a href="embed.html">Embed a webpage</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="create_yml.html">Create a _site.yml</a>
-</li>
-<li>
-  <a href="tables_plots.html">Tables and Plots</a>
-</li>
-<li>
-  <a href="images.html">Include Images</a>
-</li>
-<li>
-  <a href="embed.html">Embed a webpage</a>
-</li>
-<li>
-  <a href="publishing.html">Publishing your site</a>
-</li>
-<li>
-  <a href="updating.html">Updating</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Publish and Update
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="publishing.html">Publishing</a>
+    </li>
+    <li>
+      <a href="updating.html">Updating</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -221,14 +251,23 @@ $(document).ready(function () {
 </div>
 
 
-<p>Including an image using rmarkdown is easy.</p>
-<p>In the files pane in RStudion choose <code>New Folder</code> (or create on in your Finder in the Rproject folder). Call it say <code>images</code>.</p>
+<p>Including an image using <code>rmarkdown</code> is easy.</p>
+<p>In the files pane in RStudio choose <code>New Folder</code> (or create one in your Finder in the Rproject folder). Call it say <code>images</code>.</p>
 <p>To reference an image in rmarkdown use the following.</p>
 <p><code>![](images/yourimagename.png)</code></p>
-<p>Here is an example of the image used in this site</p>
+<p>Here is an example of a network visual created in <a href="https://gephi.org">Gephi</a> and saved in <code>images</code>.</p>
 <div class="figure">
-<img src="images/build_options.png" />
+<img src="images/fig31_adjust_nodes.png" />
 
+</div>
+<div id="sizing-images" class="section level2">
+<h2>Sizing images</h2>
+<p>There are a number of ways of sizing images using the <code>knitr</code> package. One of the simplest is to size images in R code chunks.</p>
+<p>To inserta code chunk use <code>Ctrl Alt I</code> on Windows or <code>Cmd I</code> on a Mac.</p>
+<p>In the code chunk heading we could specify the width of a figure as percentages and we might also want to centre the figure <code>{r out.width = &quot;50%&quot;, fig.align = &quot;center&quot;}</code>. We would then include a call to <code>knitr::include_graphics()</code> with our image address in quotes as below. Note that the knitr documentation specifies that you may need to <code>install.packages(&quot;png&quot;)</code> and <code>install.packages(&quot;jpeg&quot;)</code> for automatic calculation of the width of images.</p>
+<p>For most purposes something like this will work for a web page display.</p>
+<pre class="r"><code>knitr::include_graphics(&quot;images/fig31_adjust_nodes.png&quot;)</code></pre>
+<p><img src="images/fig31_adjust_nodes.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
 
 

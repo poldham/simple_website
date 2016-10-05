@@ -3,19 +3,30 @@ title: "Include Images"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+Including an image using `rmarkdown` is easy. 
 
-Including an image using rmarkdown is easy. 
-
-In the files pane in RStudion choose `New Folder` (or create on in your Finder in the Rproject folder). Call it say `images`.
+In the files pane in RStudio choose `New Folder` (or create one in your Finder in the Rproject folder). Call it say `images`.
 
 To reference an image in rmarkdown use the following. 
 
 
 `![](images/yourimagename.png)`
 
-Here is an example of the image used in this site
+Here is an example of a network visual created in [Gephi](https://gephi.org) and saved in `images`.
 
-![](images/build_options.png)
+![](images/fig31_adjust_nodes.png)
+
+##Sizing images
+
+There are a number of ways of sizing images using the `knitr` package. One of the simplest is to size images in R code chunks. 
+
+To inserta code chunk use `Ctrl Alt I` on Windows or `Cmd I` on a Mac. 
+
+In the code chunk heading we could specify the width of a figure as percentages and we might also want to centre the figure ```{r out.width = "50%", fig.align = "center"}```. We would then include a call to `knitr::include_graphics()` with our image address in quotes as below. Note that the knitr documentation specifies that you may need to `install.packages("png")` and `install.packages("jpeg")` for automatic calculation of the width of images. 
+
+For most purposes something like this will work for a web page display. 
+
+```{r echo = TRUE, out.width = "50%", fig.align = "center"}
+knitr::include_graphics("images/fig31_adjust_nodes.png")
+```
+

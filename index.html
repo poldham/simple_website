@@ -12,11 +12,11 @@
 <meta name="author" content="Paul Oldham" />
 
 
-<title>Build a Simple Website in RStudio</title>
+<title>Build a Simple Website with Rmarkdown in RStudio</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -181,29 +181,59 @@ $(document).ready(function () {
         <li>
   <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="project.html">Create a Project</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Getting Started
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Create a Project</a>
+    </li>
+    <li>
+      <a href="build.html">Set Build Options</a>
+    </li>
+    <li>
+      <a href="create_yml.html">Create a _site.yml</a>
+    </li>
+    <li>
+      <a href="theme.html">Change the Theme</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="build.html">Set Build Options</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Add Features
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tables_plots.html">Tables and Plots</a>
+    </li>
+    <li>
+      <a href="images.html">Include Images</a>
+    </li>
+    <li>
+      <a href="embed.html">Embed a webpage</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="create_yml.html">Create a _site.yml</a>
-</li>
-<li>
-  <a href="tables_plots.html">Tables and Plots</a>
-</li>
-<li>
-  <a href="images.html">Include Images</a>
-</li>
-<li>
-  <a href="embed.html">Embed a webpage</a>
-</li>
-<li>
-  <a href="publishing.html">Publishing your site</a>
-</li>
-<li>
-  <a href="updating.html">Updating</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Publish and Update
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="publishing.html">Publishing</a>
+    </li>
+    <li>
+      <a href="updating.html">Updating</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -217,14 +247,14 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Build a Simple Website in RStudio</h1>
+<h1 class="title toc-ignore">Build a Simple Website with Rmarkdown in RStudio</h1>
 <h4 class="author"><em>Paul Oldham</em></h4>
 
 </div>
 
 
 <p>It is very easy to create a nice responsive website using <code>rmarkdown</code> in the <a href="https://www.rstudio.com/products/rstudio/download/preview/">Preview version of RStudio</a>.</p>
-<p>This minimal guide will get you from opening RStudio to publishing a website in the shortest possible time….well possibly a bit longer. If you are reading this online follow the order of the menu to create a website like this one that you can publish. Take a fork and Clone the repository for this site from <a href="https://github.com/poldham/simple_website" class="uri">https://github.com/poldham/simple_website</a>… make sure to choose the <code>gh-pages</code> branch as the most upto date.</p>
+<p>This minimal guide will get you from opening RStudio to publishing a website in the shortest possible time….well possibly a bit longer. If you are reading this online follow the order of the menu to create a website like this one that you can publish. Take a <code>fork</code> then <code>clone</code> the repository for this site from <a href="https://github.com/poldham/simple_website" class="uri">https://github.com/poldham/simple_website</a>.</p>
 <p>This is not the best simple rmarkdown website in the world, it’s just a tribute. To learn more make sure you read the <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">simple RStudio walkthrough</a> that this site is based on. Learn to do a lot more by reading the <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">RStudio guide to websites</a> and a lot lot more by reading about <a href="http://rmarkdown.rstudio.com/">rmarkdown</a>.</p>
 <p>The <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> and the new <a href="https://bookdown.org">bookdown</a> packages were written by <a href="https://github.com/yihui">Yihui Xie</a> at <a href="https://www.rstudio.com">RStudio</a> and collaborators.</p>
 

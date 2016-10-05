@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -180,29 +180,59 @@ $(document).ready(function () {
         <li>
   <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="project.html">Create a Project</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Getting Started
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Create a Project</a>
+    </li>
+    <li>
+      <a href="build.html">Set Build Options</a>
+    </li>
+    <li>
+      <a href="create_yml.html">Create a _site.yml</a>
+    </li>
+    <li>
+      <a href="theme.html">Change the Theme</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="build.html">Set Build Options</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Add Features
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tables_plots.html">Tables and Plots</a>
+    </li>
+    <li>
+      <a href="images.html">Include Images</a>
+    </li>
+    <li>
+      <a href="embed.html">Embed a webpage</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="create_yml.html">Create a _site.yml</a>
-</li>
-<li>
-  <a href="tables_plots.html">Tables and Plots</a>
-</li>
-<li>
-  <a href="images.html">Include Images</a>
-</li>
-<li>
-  <a href="embed.html">Embed a webpage</a>
-</li>
-<li>
-  <a href="publishing.html">Publishing your site</a>
-</li>
-<li>
-  <a href="updating.html">Updating</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Publish and Update
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="publishing.html">Publishing</a>
+    </li>
+    <li>
+      <a href="updating.html">Updating</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -221,13 +251,13 @@ $(document).ready(function () {
 </div>
 
 
-<p>RStudio websites include a number of themes for the colour and the font etc. To view the available themes use xxx</p>
+<p>Rmarkdown includes a number of themes as described on the <a href="http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style">rmarkdown site</a>.</p>
+<p>To add a theme specify the following at the beginning or towards the end of the <code>_site.yml</code>. It makes sense to include it near the top as it saves on scrolling when you want to change it (and you will).</p>
 <pre class="r"><code>output:
   html_document:
     theme: flatly
-    highlight: textmate
-output_dir: &quot;.&quot;</code></pre>
-<p>To add a theme, add the following to your _site.yml</p>
+    highlight: textmate</code></pre>
+<p>At the time of writing the available themes that you might want to try are <code>cerulean</code>, <code>cosmo</code>, <code>flatly</code>, <code>journal</code>, <code>lumen</code>, <code>paper</code>, <code>readable</code>, <code>sandstone</code>, <code>simplex</code>, , <code>spacelab</code>, <code>united</code>, <code>yeti</code> (the following were not available <code>cyborg</code>, <code>darkly</code>, <code>slate</code>, <code>superhero</code>). See the <a href="http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style">rmarkdown site</a> and the <a href="http://bootswatch.com">Bootswatch site</a> for the theme origins with the wildly popular <a href="http://getbootstrap.com">bootstrap</a>. If none of that makes much sense, it will do when you read up on the links.</p>
 
 
 

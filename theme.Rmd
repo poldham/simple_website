@@ -7,16 +7,18 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-RStudio websites include a number of themes for the colour and the font etc. To view the available themes use xxx
+Rmarkdown includes a number of themes as described on the [rmarkdown site](http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style). 
+
+To add a theme specify the following at the beginning or towards the end of the `_site.yml`. It makes sense to include it near the top as it saves on scrolling when you want to change it (and you will). 
 
 ```{r eval=FALSE}
 output:
   html_document:
     theme: flatly
     highlight: textmate
-output_dir: "."
 ```
 
-To add a theme, add the following to your _site.yml
+At the time of writing the available themes that you might want to try are `cerulean`, `cosmo`, `flatly`, `journal`, `lumen`, `paper`, `readable`, `sandstone`, `simplex`, , `spacelab`, `united`, `yeti` (the following were not available `cyborg`, `darkly`, `slate`, `superhero`). See the [rmarkdown site](http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style) and the [Bootswatch site](http://bootswatch.com) for the theme origins with the wildly popular [bootstrap](http://getbootstrap.com). If none of that makes much sense, it will do when you read up on the links. 
+
 
 

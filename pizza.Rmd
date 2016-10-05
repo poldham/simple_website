@@ -1,0 +1,12 @@
+---
+title: "pizza"
+author: "Paul Oldham"
+date: "29 September 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Paul loves pizza

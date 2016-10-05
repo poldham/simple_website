@@ -9,15 +9,13 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Paul Oldham" />
 
-<meta name="date" content="2016-09-27" />
 
-<title>publishing the website</title>
+<title>Publishing your website</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -182,29 +180,59 @@ $(document).ready(function () {
         <li>
   <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="project.html">Create a Project</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Getting Started
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Create a Project</a>
+    </li>
+    <li>
+      <a href="build.html">Set Build Options</a>
+    </li>
+    <li>
+      <a href="create_yml.html">Create a _site.yml</a>
+    </li>
+    <li>
+      <a href="theme.html">Change the Theme</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="build.html">Set Build Options</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Add Features
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tables_plots.html">Tables and Plots</a>
+    </li>
+    <li>
+      <a href="images.html">Include Images</a>
+    </li>
+    <li>
+      <a href="embed.html">Embed a webpage</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="create_yml.html">Create a _site.yml</a>
-</li>
-<li>
-  <a href="tables_plots.html">Tables and Plots</a>
-</li>
-<li>
-  <a href="images.html">Include Images</a>
-</li>
-<li>
-  <a href="embed.html">Embed a webpage</a>
-</li>
-<li>
-  <a href="publishing.html">Publishing your site</a>
-</li>
-<li>
-  <a href="updating.html">Updating</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Publish and Update
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="publishing.html">Publishing</a>
+    </li>
+    <li>
+      <a href="updating.html">Updating</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -218,9 +246,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">publishing the website</h1>
-<h4 class="author"><em>Paul Oldham</em></h4>
-<h4 class="date"><em>27 September 2016</em></h4>
+<h1 class="title toc-ignore">Publishing your website</h1>
 
 </div>
 
@@ -229,29 +255,26 @@ $(document).ready(function () {
 <h2>Github</h2>
 <p>We will assume that you will be publishing to Github using Github desktop (rather than directly from RStudio which takes a little more set up).</p>
 <ol style="list-style-type: decimal">
-<li><p>Create an empty text file <code>.nojekyll</code> and save it at the root of the site (normally the project folder). Ignore any warnings about the file type. Because it starts with <code>.</code> the file will not show up in the file listing. However, this tells Github not to try and build the site with jekyll (the default for Github).</p></li>
-<li><p>In the <code>_site.yml</code> add a line with <code>output_dir: &quot;.&quot;</code>.</p></li>
-<li><p>The site files are sent to _site in your project folder. Move <code>index.html</code> to the main project folder (the site root) or it will not build when you push it to Github.</p></li>
-<li><p>Add your project folder to github desktop. Press commit and then sync. This will add the site to your github repositories.</p></li>
+<li><p>Create an empty text file <code>.nojekyll</code> and save it at the root of the site (normally the project folder). Ignore any warnings about the file type. Because it starts with <code>.</code> the file will not show up in the file listing. However, this tells Github not to try and build the site with jekyll (the default for Github). If you have forked and cloned this site from Github this has been done for you.</p></li>
+<li><p>In the <code>_site.yml</code> add a line with <code>output_dir: &quot;.&quot;</code>. If you have forked and cloned this site from Github this has been done for you.</p></li>
+<li><p>The site files are sent to <code>_site</code> in your project folder. Move <code>index.html</code> to the main project folder (the site root) or it will not build when you push it to Github. If you have forked and cloned this site then this has been done for you.</p></li>
+<li><p>If you can’t already see your project folder then add your project folder to github desktop. Write a quick message in Summary the Press commit and then sync. This will add the site to your github repositories.</p></li>
 </ol>
 <div class="figure">
 <img src="images/add_github_desktop.png" />
 
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Github will allow you to publish project websites for each repository (known as github pages or <code>gh-pages</code>). They will end up being posted at <code>yourusername.github.io/repositoryname</code>.</li>
+<li>Github will allow you to publish project websites for each repository (known as github pages or <code>gh-pages</code>). They will end up being published at <code>yourusername.github.io/repositoryname</code>.</li>
 </ol>
 <p>For example, the home for this website is <a href="https://github.com/poldham/simple_website" class="uri">https://github.com/poldham/simple_website</a></p>
 <div class="figure">
 <img src="images/website_address.png" />
 
 </div>
-<p>But, this is not the end of the story. What we see above where it says branch on the left is the <code>master</code>. Websites are published on the github pages branch of a repository to keep them separate (because your repository data and your project website may be quite different things).</p>
-<p>To publish the website we need to go into <code>Settings</code> in our repository and then scroll down. In the image below, where you see <code>master</code> in your repo change the branch to <code>gh-pages</code>. Your simple website will now build at the address given. You are reading this online so it must do.</p>
-<div class="figure">
-<img src="images/website_gh_pages.png" />
-
-</div>
+<p>But, this is where we need to take care. In the image above on the left we can see that next to <code>Branch</code> it says <code>master</code>. Websites are published on the github pages branch (<code>gh-pages</code>) branch of a repository to keep them separate (because your repository data and your project website may be quite different things). So, your website is not yet published.</p>
+<p>To publish the website we need to go into <code>Settings</code> in our repository and then scroll down. In the image below, where you see <code>master</code> in your repo change the branch to <code>gh-pages</code>. Your simple website will now build at the address given. You are reading this online so it must do. <img src="images/website_gh_pages.png" /></p>
+<p>If you have forked and cloned this site then all should be good, because the master branch has been deleted leaving only the <code>gh-pages</code> branch. However, if you have started from scratch you will need the procedure above.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Troubleshooting. It can take a few minutes (but not long) for Github to recognise the website. If you see a not found message check three things.</li>
 </ol>
@@ -260,6 +283,7 @@ $(document).ready(function () {
 <li>That you have <code>.nojekyll</code> in your main site folder.</li>
 <li>That there is an index.html (you remembered to move it from the <code>_site</code> folder when you updated… easy to forget).</li>
 <li>That you have selected the <code>gh-pages</code> branch in <code>Settings</code> in your repo.</li>
+<li>If you are using this site as your basis make sure that you have forked and then cloned the repository (the fork makes it your copy, a clone is just a copy).</li>
 </ul>
 </div>
 
