@@ -1,0 +1,14 @@
+---
+title: "Embed an Infographic"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We have been using [infogr.am](https://infogr.am/) to create an infographic on drones that can be freely shared. The procedure is the same as for embedding a web page but you may need to work on the settings for the width and the height in the code below. In the rmarkdown replace the url with the url for your infographic and then adjust the width and the height.
+
+<iframe align = "center" width = "1000" height = "1000" src="https://infogr.am/1e56252f-7463-4ff2-93bf-37955f73f9b3"/>
+
+

@@ -25,6 +25,8 @@ navbar:
           href: images.html
         - text: "Embed a webpage"
           href: embed.html
+        - text: "Embed an infographic"
+          href: info.html 
     - text: "Publish and Update"      
       menu: 
         - text: "Publishing"

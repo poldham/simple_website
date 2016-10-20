@@ -11,7 +11,7 @@
 
 
 
-<title>Publishing your website</title>
+<title>Embed an Infographic</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -249,46 +249,13 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Publishing your website</h1>
+<h1 class="title toc-ignore">Embed an Infographic</h1>
 
 </div>
 
 
-<div id="github" class="section level2">
-<h2>Github</h2>
-<p>We will assume that you will be publishing to Github using Github desktop (rather than directly from RStudio which takes a little more set up).</p>
-<ol style="list-style-type: decimal">
-<li><p>Create an empty text file <code>.nojekyll</code> and save it at the root of the site (normally the project folder). Ignore any warnings about the file type. Because it starts with <code>.</code> the file will not show up in the file listing. However, this tells Github not to try and build the site with jekyll (the default for Github). If you have forked and cloned this site from Github this has been done for you.</p></li>
-<li><p>In the <code>_site.yml</code> add a line with <code>output_dir: &quot;.&quot;</code>. If you have forked and cloned this site from Github this has been done for you.</p></li>
-<li><p>The site files are sent to <code>_site</code> in your project folder. Move <code>index.html</code> to the main project folder (the site root) or it will not build when you push it to Github. If you have forked and cloned this site then this has been done for you.</p></li>
-<li><p>If you can’t already see your project folder then add your project folder to github desktop. Write a quick message in Summary the Press commit and then sync. This will add the site to your github repositories.</p></li>
-</ol>
-<div class="figure">
-<img src="images/add_github_desktop.png" />
-
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>Github will allow you to publish project websites for each repository (known as github pages or <code>gh-pages</code>). They will end up being published at <code>yourusername.github.io/repositoryname</code>.</li>
-</ol>
-<p>For example, the home for this website is <a href="https://github.com/poldham/simple_website" class="uri">https://github.com/poldham/simple_website</a></p>
-<div class="figure">
-<img src="images/website_address.png" />
-
-</div>
-<p>But, this is where we need to take care. In the image above on the left we can see that next to <code>Branch</code> it says <code>master</code>. Websites are published on the github pages branch (<code>gh-pages</code>) branch of a repository to keep them separate (because your repository data and your project website may be quite different things). So, your website is not yet published.</p>
-<p>To publish the website we need to go into <code>Settings</code> in our repository and then scroll down. In the image below, where you see <code>master</code> in your repo change the branch to <code>gh-pages</code>. Your simple website will now build at the address given. You are reading this online so it must do. <img src="images/website_gh_pages.png" /></p>
-<p>If you have forked and cloned this site then all should be good, because the master branch has been deleted leaving only the <code>gh-pages</code> branch. However, if you have started from scratch you will need the procedure above.</p>
-<ol start="6" style="list-style-type: decimal">
-<li>Troubleshooting. It can take a few minutes (but not long) for Github to recognise the website. If you see a not found message check three things.</li>
-</ol>
-<ul>
-<li>That you have a line saying <code>output_dir: &quot;.&quot;</code> at the bottom of <code>_site.yml</code>.</li>
-<li>That you have <code>.nojekyll</code> in your main site folder.</li>
-<li>That there is an index.html (you remembered to move it from the <code>_site</code> folder when you updated… easy to forget).</li>
-<li>That you have selected the <code>gh-pages</code> branch in <code>Settings</code> in your repo.</li>
-<li>If you are using this site as your basis make sure that you have forked and then cloned the repository (the fork makes it your copy, a clone is just a copy).</li>
-</ul>
-</div>
+<p>We have been using <a href="https://infogr.am/">infogr.am</a> to create an infographic on drones that can be freely shared. The procedure is the same as for embedding a web page but you may need to work on the setting for the height in the code below. In the rmarkdown replace the url with the url for your infographic and then adjust the height.</p>
+<iframe align = "center" width = "1000" height = "1000" src="https://infogr.am/1e56252f-7463-4ff2-93bf-37955f73f9b3"/>
 
 
 
